@@ -4,8 +4,12 @@ import models
 from datetime import datetime
 
 # Simple password hashing placeholder for demo
+from passlib.context import CryptContext
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
 def get_password_hash(password):
-    return f"hashed_{password}"
+    return pwd_context.hash(password)
 
 def seed():
     # Ensure tables are created
