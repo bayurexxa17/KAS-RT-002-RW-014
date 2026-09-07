@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from .database import SessionLocal, engine
-from . import models
+from database import SessionLocal, engine
+import models
 from datetime import datetime
 
 # Simple password hashing placeholder for demo
